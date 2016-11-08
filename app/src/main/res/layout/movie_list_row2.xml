@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:clickable="true"
+    android:background="#000000"
+    android:orientation="vertical">
+
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/custom_border"
+        android:paddingBottom="10dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linear1"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <TextView
+                    android:id="@+id/engText"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_alignParentLeft="true"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:padding="10dip"
+                    android:layout_weight="9"/>
+
+
+                <ImageButton
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/speaker"
+                    android:background="@drawable/ic_action_volume_on"
+                    android:clickable="true"
+                    android:onClick="soundFunction"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="1"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="10dip"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/transText"
+                android:textColor="#FFFFFF"
+                android:padding="10dip"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginRight="30dip"
+                android:layout_below="@id/linear1"/>
+
+
+            <Button
+                android:layout_width="30dip"
+                android:layout_height="20dip"
+                android:id="@+id/msgtext"
+                android:background="@drawable/ic_mail_outline_white_48dp"
+                android:clickable="true"
+                android:onClick="sendMessage"
+                android:layout_margin="10dip"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/linear1"/>
+
+
+            <TextView
+                android:id="@+id/urduText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#FFFFFF"
+                android:padding="12dip"
+                android:textSize="20sp"
+                android:gravity="start"
+                android:layout_marginTop="10dip"
+                android:layout_below="@id/transText"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
